@@ -1,0 +1,202 @@
+
+$primary-heading-color: #e6eaeb;
+$primary-button-color: #8182b9;
+$primary-bg-color: #ff6f6f;
+$primary-text-color: #e6eaeb;
+
+/* basic reset for project | 
+removing all browser defaults */
+*,
+*::after,
+*::before {
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* font properties for project */
+body {
+    font-family: 'Open Sans', 'Roboto', 'Lato', sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: #e6eaeb;
+    /*padding: 3rem;*/
+    /*creative option for customer*/
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(
+        to left, 
+        rgba(255,111,111,0.8), 
+        rgba(129,130,185,0.8)) ,
+        url(../images/landingpage.jpg);
+        background-size: cover;
+        position: relative;
+    /*background-position: ;*/ /*can be set to 
+    top,bottom,center | 
+    customer option*/
+    /*clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);*/ 
+    /* creative option for customer */
+}
+
+/* if customer has logo | 
+wants on site landingpage 
+.header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 3.5rem;
+} */
+
+/* unused | customer option
+.logo:hover {
+    animation: moveInRight 1s ease-out;
+}*/
+
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.primary-heading {
+    color: $primary-heading-color;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+}
+
+.primary-heading--main {
+    display:block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 2.5rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    /*animation-delay: ;
+    animation-iteration-count: ;*/
+    /* customer option*/
+}
+
+.primary-heading--sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1.38rem;
+    /*animation: moveInLeft 3s ease-out;*/
+    /* only applied if sub heading moves */
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    /* will not use bounce | custom option
+    80% {
+        transform: translateX(-2rem);
+    }
+    */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* unused on this site | customer option 
+| for sub heading
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    /* will not use bounce | custom option
+    80% {
+        transform: translateX(2rem);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+*/
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn--landingpage {
+    background-color: $primary-heading-color;
+    color: $primary-button-color;
+}
+
+.btn::after {
+    content:"";
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--landingpage::after {
+    background-color: $primary-heading-color;
+}
+
+.btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInButton .5 ease-out 5.7s;
+    animation-fill-mode: backwards;
+}
+
