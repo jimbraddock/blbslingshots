@@ -13,6 +13,8 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #e6eaeb;
+    /*padding: 30px;*/ 
+    /*creative option for customer*/
 }
 
 .header {
@@ -26,4 +28,6 @@ body {
     /*background-position: ;*/ /*can be set to 
     top,bottom,center | 
     customer option*/
+    /*clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);*/ 
+    /*creative option for customer*/
 }
