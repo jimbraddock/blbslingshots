@@ -1,0 +1,38 @@
+.header {
+    height: 100vh;
+    background-image: linear-gradient(
+        to left, 
+        rgba(255,111,111,0.8), 
+        rgba(129,130,185,0.8)) ,
+        url(../images/landingpage.jpg);
+        background-size: cover;
+        position: relative;
+    /*background-position: ;*/ /*can be set to 
+    top,bottom,center | 
+    customer option*/
+    /*clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);*/ 
+    /* creative option for customer */
+
+
+    /* if customer has logo | 
+    wants on site landingpage 
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }*/
+
+    /* no logo on this site
+    &__logo {
+        height: 3.5rem;
+    }*/
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+}
