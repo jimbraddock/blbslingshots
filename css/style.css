@@ -45,17 +45,24 @@ wants on site landingpage
     height: 35px;
 } */
 
+/* unused | customer option
+.logo:hover {
+    animation: moveInRight 1s ease-out;
+}*/
+
 .text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 
 .primary-heading {
     color: #e6eaeb;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 30px;
 }
 
 .primary-heading-main {
@@ -96,6 +103,8 @@ wants on site landingpage
     }
 }
 
+/* unused on this site | customer option 
+| for sub heading
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -105,9 +114,75 @@ wants on site landingpage
     80% {
         transform: translateX(20px);
     }
-    */
+    
     100% {
         opacity: 1;
         transform: translate(0);
     }
 }
+*/
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-landingpage {
+    background-color: #e6eaeb;
+    color: #8182b9;
+}
+
+.btn::after {
+    content:"";
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-landingpage::after {
+    background-color: #e6eaeb;
+}
+
+.btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInButton .5 ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
