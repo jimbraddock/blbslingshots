@@ -1,0 +1,25 @@
+/* basic reset for project | 
+removing all browser defaults */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font properties for project */
+body {
+    font-family: 'Open Sans', 'Roboto', 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e6eaeb;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to left, rgba(255,111,111,0.8), rgba(129,130,185,0.8)) ,url(../images/landingpage.jpg);
+    background-size: cover;
+    /*background-position: ;*/ /*can be set to 
+    top,bottom,center | 
+    customer option*/
+}
