@@ -13,7 +13,7 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #e6eaeb;
-    /*padding: 30px;*/ 
+    /*padding: 30px;*/
     /*creative option for customer*/
 }
 
@@ -24,10 +24,49 @@ body {
         rgba(255,111,111,0.8), 
         rgba(129,130,185,0.8)) ,
         url(../images/landingpage.jpg);
-    background-size: cover;
+        background-size: cover;
+        position: relative;
     /*background-position: ;*/ /*can be set to 
     top,bottom,center | 
     customer option*/
     /*clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);*/ 
-    /*creative option for customer*/
+    /* creative option for customer */
+}
+
+/* if customer has logo | 
+wants on site landingpage 
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+} */
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.primary-heading {
+    color: #e6eaeb;
+    text-transform: uppercase;
+}
+
+.primary-heading-main {
+    display:block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.primary-heading-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 15px;
 }
