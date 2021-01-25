@@ -4,6 +4,10 @@ $primary-button-color: #8182b9;
 $primary-bg-color: #ff6f6f;
 $primary-text-color: #e6eaeb;
 
+$color-grey-dark: #777;
+$color-basic-white: #fff;
+$color-basic-black: #000;
+
 /* basic reset for project | 
 removing all browser defaults */
 *,
@@ -44,31 +48,29 @@ html {
     customer option*/
     /*clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);*/ 
     /* creative option for customer */
-}
 
-/* if customer has logo | 
-wants on site landingpage 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
 
-.header__logo {
-    height: 3.5rem;
-} */
+    /* if customer has logo | 
+    wants on site landingpage 
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }*/
 
-/* unused | customer option
-.logo:hover {
-    animation: moveInRight 1s ease-out;
-}*/
+    /* no logo on this site
+    &__logo {
+        height: 3.5rem;
+    }*/
 
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
 }
 
 .primary-heading {
@@ -76,29 +78,30 @@ wants on site landingpage
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 3rem;
+
+    &--main {
+        display:block;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 2.5rem;
+        animation-name: moveInRight;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        /*animation-delay: ;
+        animation-iteration-count: ;*/
+        /* customer option*/
+    }
+
+    &--sub {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 1.38rem;
+        /*animation: moveInLeft 3s ease-out;*/
+        /* only applied if sub heading moves */
+    }
 }
 
-.primary-heading--main {
-    display:block;
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 2.5rem;
-    animation-name: moveInRight;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    /*animation-delay: ;
-    animation-iteration-count: ;*/
-    /* customer option*/
-}
-
-.primary-heading--sub {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1.38rem;
-    /*animation: moveInLeft 3s ease-out;*/
-    /* only applied if sub heading moves */
-}
 
 @keyframes moveInRight {
     0% {
@@ -161,11 +164,11 @@ wants on site landingpage
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba($color-basic-black,.2);
 }
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba($color-basic-black,.2);
 }
 
 .btn--landingpage {
