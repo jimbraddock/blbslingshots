@@ -150,33 +150,43 @@ html {
     }
 }
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-}
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-basic-black,.2);
-}
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-basic-black,.2);
-}
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-basic-black,.2);
 
-.btn--landingpage {
-    background-color: $primary-heading-color;
-    color: $primary-button-color;
-}
+        &::after {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 .5rem 1rem rgba($color-basic-black,.2);
+    }
 
-.btn::after {
+        &--landingpage {
+            background-color: $primary-heading-color;
+            color: $primary-button-color;
+
+        &::after {
+            background-color: $primary-heading-color;
+        }
+    }
+
+    &::after {
     content:"";
     display:inline-block;
     height: 100%;
@@ -187,19 +197,13 @@ html {
     left: 0;
     z-index: -1;
     transition: all .4s;
-}
+    }
 
-.btn--landingpage::after {
-    background-color: $primary-heading-color;
-}
-
-.btn:hover::after {
-    transform: scale(1.5);
-    opacity: 0;
-}
-
-.btn--animated {
+    &--animated {
     animation: moveInButton .5 ease-out 5.7s;
     animation-fill-mode: backwards;
+    }
+
+
 }
 
