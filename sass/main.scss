@@ -5,9 +5,12 @@
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
+@import "base/utilities";
 
+@import "components/bg-vid";
 @import "components/button";
 
 @import "pages/home";
 
+@import "layouts/footer";
 @import "layouts/header";
