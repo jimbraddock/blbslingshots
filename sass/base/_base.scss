@@ -19,7 +19,7 @@ body {
     /*creative option for customer*/
     box-sizing: border-box;
 
-        @include respond(tab-port) {
+        @include respond(phone) {
             padding: 0;
         }
 }
