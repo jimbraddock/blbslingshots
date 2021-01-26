@@ -1,203 +1,254 @@
-/* colors used throughout project
-primary heading color: #e6eaeb;
-btn text color: #8182b9;
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
 */
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  /* will not use bounce | custom option
+    80% {
+        transform: translateX(-2rem);
+    }
+    */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
+/* unused on this site | customer option 
+| for sub heading*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  /* will not use bounce | custom option
+    80% {
+        transform: translateX(2rem);
+    }*/
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /* basic reset for project | 
 removing all browser defaults */
 *,
 *::after,
 *::before {
-    margin:0;
-    padding: 0;
-    box-sizing: inherit;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 /* font properties for project */
 body {
-    font-family: 'Open Sans', 'Roboto', 'Lato', sans-serif;
-    font-weight: 400;
-    /*font-size: 16px;*/
-    line-height: 1.7;
-    color: #e6eaeb;
-    /*padding: 3rem;*/
-    /*creative option for customer*/
-    box-sizing: border-box;
-}
+  font-family: 'Open Sans', 'Roboto', 'Lato', sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #e6eaeb;
+  /*padding: 3rem;*/
+  /*creative option for customer*/
+  box-sizing: border-box; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      padding: 0; } }
 
 html {
-    font-size: 62.5%;
-}
-
-.header {
-    height: 100vh;
-    background-image: linear-gradient(
-        to left, 
-        rgba(255,111,111,0.8), 
-        rgba(129,130,185,0.8)) ,
-        url(../images/landingpage.jpg);
-        background-size: cover;
-        position: relative;
-    /*background-position: ;*/ /*can be set to 
-    top,bottom,center | 
-    customer option*/
-    /*clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);*/ 
-    /* creative option for customer */
-}
-
-/* if customer has logo | 
-wants on site landingpage 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-    height: 3.5rem;
-} */
-
-/* unused | customer option
-.logo:hover {
-    animation: moveInRight 1s ease-out;
-}*/
-
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 .primary-heading {
-    color: #e6eaeb;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 3rem;
-}
-
-.primary-heading--main {
-    display:block;
+  color: #e6eaeb;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 3rem; }
+  .primary-heading--main {
+    display: block;
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: 2.5rem;
     animation-name: moveInRight;
     animation-duration: 3s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
     /*animation-delay: ;
-    animation-iteration-count: ;*/
-    /* customer option*/
-}
-
-.primary-heading--sub {
+        animation-iteration-count: ;*/
+    /* customer option*/ }
+  .primary-heading--sub {
     display: block;
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 1.38rem;
-    /*animation: moveInLeft 3s ease-out;*/
-    /* only applied if sub heading moves */
-}
+    animation: moveInLeft 3.5s ease-out;
+    /* only applied if sub heading moves */ }
 
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    /* will not use bounce | custom option
-    80% {
-        transform: translateX(-2rem);
-    }
-    */
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+.secondary-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  background-image: linear-gradient(to right, #ff6f6f, #8182b9);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 56.25em) {
+    .secondary-heading {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .secondary-heading {
+      font-size: 2.5rem; } }
+  .secondary-heading:hover {
+    transform: skewY(0) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-/* unused on this site | customer option 
-| for sub heading
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    /* will not use bounce | custom option
-    80% {
-        transform: translateX(2rem);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-*/
+.tek-center-text {
+  text-align: center !important; }
 
-@keyframes moveInButton {
-    0% {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
+.tek-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+.tek-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .tek-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-}
+.tek-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .tek-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-}
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-}
+.tek-margin-top-big {
+  margin-top: 8rem !important; }
 
-.btn--landingpage {
-    background-color: #e6eaeb;
-    color: #8182b9;
-}
+.tek-margin-top-huge {
+  margin-top: 10rem !important; }
 
-.btn::after {
-    content:"";
-    display:inline-block;
+.bg-video {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .1;
+  overflow: hidden; }
+  .bg-video__content {
     height: 100%;
     width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+    object-fit: cover; }
 
-.btn--landingpage::after {
-    background-color: #e6eaeb;
-}
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
 
-.btn:hover::after {
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
     transform: scale(1.5);
-    opacity: 0;
-}
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--landingpage {
+  background-color: #e6eaeb;
+  color: #8182b9; }
+  .btn--landingpage::after {
+    background-color: #e6eaeb; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
 
 .btn--animated {
-    animation: moveInButton .5 ease-out 5.7s;
-    animation-fill-mode: backwards;
-}
+  animation: moveInButton .5 ease-out 5.7s;
+  animation-fill-mode: backwards; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  /*background: $primary-heading-color;*/
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: 1.6rem; }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: orange; }
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to left, rgba(255, 111, 111, 0.8), rgba(129, 130, 185, 0.8)), url(../images/landingpage.jpg);
+  background-size: cover;
+  position: relative;
+  /*background-position: ;*/
+  /*can be set to 
+    top,bottom,center | 
+    customer option*/
+  /*clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);*/
+  /* creative option for customer */
+  /* if customer has logo | 
+    wants on site landingpage 
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }*/
+  /* no logo on this site
+    &__logo {
+        height: 3.5rem;
+    }*/ }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(255, 111, 111, 0.8), rgba(129, 130, 185, 0.8)), url(../images/landingpage.jpg); } }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
