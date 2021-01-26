@@ -15,7 +15,7 @@
 }
 
 /* unused on this site | customer option 
-| for sub heading
+| for sub heading*/
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -24,14 +24,14 @@
     /* will not use bounce | custom option
     80% {
         transform: translateX(2rem);
-    }
+    }*/
     
     100% {
         opacity: 1;
         transform: translate(0);
     }
 }
-*/
+
 
 @keyframes moveInButton {
     0% {
