@@ -1,0 +1,69 @@
+.cards {
+    grid-column: center-start / center-end;
+    margin: 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+}
+
+.card {
+    background-color: $primary-text-color;
+    box-shadow: #777;
+    border-radius: 1.5rem;
+    height: 35rem;
+    padding: 2rem;
+    text-align: center;    
+
+    &__text {
+        text-align: center;
+        color: $card-hover-blue;
+        font-size: 1rem;
+    }
+
+    &__image {
+        padding-top: 3rem;
+        color: $card-hover-blue;
+        font-size: 4rem;
+        /*color: #8a2be2*/
+    }
+
+    &__shadow {
+        /*padding: 1.5rem 4rem;*/
+        box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
+    }
+
+    &__image:hover {
+        color: $primary-text-color;
+    }
+
+    &__text:hover {
+        color: $primary-text-color;
+    }
+
+    &__heading:hover {
+        color: $primary-text-color;
+    }
+
+    &__heading {
+        font-size: 1.9rem;
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+        letter-spacing: .25rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: $card-hover-blue;
+    }
+
+}
+
+.card:hover {
+    transform: translateY(-.5rem);
+    background: linear-gradient(to left, rgba(129,130,185,.8),rgba(255,111,111,.8));
+    color: $primary-text-color;
+
+}
+
+.card:active {
+    transform: translateY(-.1rem);
+}
