@@ -1,4 +1,4 @@
-@import "abstracts/functions";
+
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
@@ -7,11 +7,7 @@
 @import "base/typography";
 @import "base/utilities";
 
-@import "components/bg-video";
 @import "components/button";
-@import "components/story";
-
-@import "pages/home";
 
 @import "layouts/cards";
 @import "layouts/footer";
