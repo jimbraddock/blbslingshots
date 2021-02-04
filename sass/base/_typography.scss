@@ -27,6 +27,33 @@
     }
 }
 
+.secondary-heading {
+    color: $primary-heading-color;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+
+    &--main {
+        display:block;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 2rem;
+
+        /*animation-delay: ;
+        animation-iteration-count: ;*/
+        /* customer option*/
+    }
+
+    &--sub {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 1.38rem;
+        
+        /* only applied if sub heading moves */
+    }
+}
+
 /*
 .secondary-heading {
     font-size: 3rem;

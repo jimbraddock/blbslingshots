@@ -11,5 +11,8 @@
   "devDependencies": {
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "hover.css": "^2.3.2"
   }
 }
