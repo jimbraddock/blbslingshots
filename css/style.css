@@ -225,24 +225,24 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
-  background-image: #ffffff; }
+  background-image: #e6eaeb; }
 
 .actions {
   background-color: transparent;
   border-radius: 1.5rem;
   height: 25rem;
-  padding: 3rem;
+  padding: 1rem;
   text-align: center; }
   .actions__text {
     text-align: center;
     color: transparent;
     font-size: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     letter-spacing: .25rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: inline-block;
     transition: all .2s;
     -webkit-background-clip: text;
@@ -265,8 +265,8 @@ html {
   text-align: right; }
 
 .social-media a {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   line-height: 4rem;
   margin-left: .6rem;
   margin-right: 0;
@@ -281,23 +281,23 @@ html {
   list-style: none; }
 
 .social-media li {
-  display: block;
+  display: inline-block;
   margin-bottom: .4rem; }
 
 .social-media li.title {
-  margin-right: 15px;
+  margin-right: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.3rem; }
+  font-size: 2.3rem; }
 
 .social-media a {
   background-color: #8182b9;
   color: #ff6f6f;
   font-size: 1.6rem;
   display: inline-block;
-  line-height: 4.4rem;
-  width: 4.4rem;
-  height: 4.4rem;
+  line-height: 5.4rem;
+  width: 5.4rem;
+  height: 5.4rem;
   text-align: center;
   margin-right: .8rem;
   border-radius: 100%;
@@ -311,12 +311,12 @@ html {
   color: #8182b9;
   background-color: #ff6f6f; }
 
-.social-media.size-sm a {
-  line-height: 3.4rem;
-  height: 3.4rem;
-  width: 3.4rem;
-  font-size: 1.4rem; }
-
+/*.social-media.size-sm a {
+    line-height: 3.4rem;
+    height: 4.4rem;
+    width: 4.4rem;
+    font-size: 1.4rem;
+}*/
 .cards {
   grid-column: center-start / center-end;
   margin: 5rem;
@@ -329,7 +329,7 @@ html {
   box-shadow: #777;
   border-radius: 1.5rem;
   height: 35rem;
-  padding: 2rem;
+  /*padding: 2rem;*/
   text-align: center; }
   .card__text {
     text-align: center;
@@ -367,6 +367,57 @@ html {
 
 .card:active {
   transform: translateY(-0.1rem); }
+
+.footer {
+  height: 35vh;
+  background-color: #8182b9;
+  padding: 5rem 0;
+  font-size: 1.4rem;
+  color: #e6eaeb;
+  /*&__logo-box {
+        text-align: center;
+        margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__logo {
+        width: 15rem;
+        height: auto;
+    }*/ }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      padding: 8rem 0; } }
+  .footer__navigation {
+    display: inline-block; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #e6eaeb;
+    background-color: #8182b9;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block; }
+  .footer__link:hover, .footer__link:active {
+    color: #ff6f6f; }
+  .footer__copyright {
+    border-top: 1px solid #ff6f6f;
+    padding-top: 2rem;
+    width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .header {
   height: 100vh;
