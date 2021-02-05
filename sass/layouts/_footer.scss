@@ -1,5 +1,5 @@
 .footer {
-    height: 35vh;
+    height: 40vh;
     background-color: $card-hover-blue;
     padding: 5rem 0;
     font-size: 1.4rem;
@@ -9,24 +9,11 @@
         padding: 8rem 0;
     }
 
-    /*&__logo-box {
-        text-align: center;
-        margin-bottom: 8rem;
-
-        @include respond(tab-port) {
-            margin-bottom: 6rem;
-        }
-    }
-
-    &__logo {
-        width: 15rem;
-        height: auto;
-    }*/
-
     &__navigation {
-        display: inline-block;
+        display: table;
+        margin: 0 auto;
 
-        @include respond(tab-port) {
+        @include respond(phone) {
             width: 100%;
             text-align: center;
         }
@@ -34,10 +21,12 @@
 
     &__list {
         list-style: none;
+
     }
 
     &__item {
-        display: inline-block;
+        display: inline;
+
 
         &:not(:last-child) {
             margin-right: 1.5rem;
@@ -50,7 +39,6 @@
             color: $primary-text-color;
             background-color: $card-hover-blue ;
             text-decoration: none;
-            text-transform: uppercase;
             display: inline-block;
         }
 
@@ -64,11 +52,22 @@
         border-top: 1px solid $card-hover-red;
         padding-top: 2rem;
         width: 100%;
+        display: table;
+        margin: 0 auto;
 
-
-        @include respond(tab-port) {
+        @include respond(phone) {
             width: 100%;
             float: none;
         }
     }
+}
+
+.copyright-text {
+    display: table;
+    margin: 0 auto;
+}
+
+.website {
+    text-decoration: none;
+    color: $card-hover-red;
 }
