@@ -368,6 +368,9 @@ html {
 .card:active {
   transform: translateY(-0.1rem); }
 
+.fa-li {
+  text-decoration: none; }
+
 .footer {
   height: 40vh;
   background-color: #8182b9;
